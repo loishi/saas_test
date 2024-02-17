@@ -2,7 +2,7 @@ import { ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 import ms from "ms";
 
-import { env } from "@/env.mjs"
+import { env } from "~/env.mjs"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

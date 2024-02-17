@@ -3,10 +3,10 @@ import { NextAuthOptions } from "next-auth"
 import EmailProvider from "next-auth/providers/email"
 import GoogleProvider from "next-auth/providers/google"
 
-import { siteConfig } from "@/config/site"
-import MagicLinkEmail from "@/emails/magic-link-email"
-import { env } from "@/env.mjs"
-import { prisma } from "@/lib/db"
+import { siteConfig } from "~/config/site"
+import MagicLinkEmail from "~/emails/magic-link-email"
+import { env } from "~/env.mjs"
+import { prisma } from "~/lib/db"
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),

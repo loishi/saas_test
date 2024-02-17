@@ -1,17 +1,17 @@
 import { notFound } from "next/navigation"
 import { allDocs } from "contentlayer/generated"
 
-import { getTableOfContents } from "@/lib/toc"
-import { Mdx } from "@/components/content/mdx-components"
-import { DocsPageHeader } from "@/components/docs/page-header"
-import { DocsPager } from "@/components/docs/pager"
-import { DashboardTableOfContents } from "@/components/shared/toc"
+import { getTableOfContents } from "~/lib/toc"
+import { Mdx } from "~/components/content/mdx-components"
+import { DocsPageHeader } from "~/components/docs/page-header"
+import { DocsPager } from "~/components/docs/pager"
+import { DashboardTableOfContents } from "~/components/shared/toc"
 
-import "@/styles/mdx.css"
+import "~/styles/mdx.css"
 import { Metadata } from "next"
 
-import { env } from "@/env.mjs"
-import { absoluteUrl } from "@/lib/utils"
+import { env } from "~/env.mjs"
+import { absoluteUrl } from "~/lib/utils"
 
 interface DocPageProps {
   params: {

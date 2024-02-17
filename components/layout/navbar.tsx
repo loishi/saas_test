@@ -1,14 +1,14 @@
 "use client";
 
-import useScroll from "@/hooks/use-scroll";
-import { MainNavItem } from "@/types";
+import useScroll from "~/hooks/use-scroll";
+import { MainNavItem } from "~/types";
 import { User } from "next-auth";
 import { MainNav } from "./main-nav";
 import { UserAccountNav } from "./user-account-nav";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "~/components/ui/button";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { useSigninModal } from "@/hooks/use-signin-modal";
+import { cn } from "~/lib/utils";
+import { useSigninModal } from "~/hooks/use-signin-modal";
 
 
 interface NavBarProps {

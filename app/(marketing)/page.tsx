@@ -1,10 +1,10 @@
 import Link from "next/link"
 
-import { buttonVariants } from "@/components/ui/button"
-import { siteConfig } from "@/config/site"
-import { cn, nFormatter } from "@/lib/utils"
-import { Icons } from "@/components/shared/icons"
-import { env } from "@/env.mjs"
+import { buttonVariants } from "~/components/ui/button"
+import { siteConfig } from "~/config/site"
+import { cn, nFormatter } from "~/lib/utils"
+import { Icons } from "~/components/shared/icons"
+import { env } from "~/env.mjs"
 
 export default async function IndexPage() {
   // const { stargazers_count: stars } = await fetch(

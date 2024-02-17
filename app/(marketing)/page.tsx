@@ -30,7 +30,7 @@ export default async function IndexPage() {
     {/* <div className="container flex max-w-[64rem] flex-col items-center gap-6 text-center">
 
           <Image className="animate-fade-up object-center" src="/logo_no_text.png" width={256} height={256}alt="KUCC Logo" /></div> */}
-       <section className="space-y-6 pb-8 lg:pb-20">
+       <section className="space-y-6 pb-8 lg:pb-12">
 
         <div className="container flex max-w-[64rem] flex-col items-center gap-6 text-center">
 
@@ -62,17 +62,19 @@ export default async function IndexPage() {
               About us
             </Link>
             <Link href="/login" className={cn(buttonVariants({ variant: "outline", size: "lg"}), "bg-sky-400 text-black hover:bg-sky-500 hover:text-black")}>
-              会員向けページ
+              会員ページ
             </Link>
-            <Link
+            
+          </div>
+          
+          <Link
             href="https://twitter.com/keio_kucc"
-            className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-            style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
-            target="_blank"
+            className={cn(buttonVariants({ variant: "outline", size: "lg" }), "animate-fade-up" )}
+            style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
+            // target="_blank"
           >
             Follow us on <Icons.twitter className="ml-2 size-4" />
           </Link>
-          </div>
           
         </div>
       </section>

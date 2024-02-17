@@ -20,17 +20,8 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              Keio University Chess Club
-            </a>
-            . Hosted on {""}
-            <a
-              href="https://vercel.com"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Vercel 
-            </a>            
+              Loishi
+            </a>     
             . The source code is available on{" "}
             <a
               href={siteConfig.links.github}

@@ -9,6 +9,7 @@ import { siteConfig } from "~/config/site"
 import { cn } from "~/lib/utils"
 import { Icons } from "~/components/shared/icons"
 import { MobileNav } from "~/components/layout/mobile-nav"
+import Image from "next/image"
 
 interface MainNavProps {
   items?: MainNavItem[]
@@ -40,7 +41,7 @@ export function MainNav({ items, children }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
-        <Icons.logo />
+        <Image src="/logo_white_2.png" width={48} height={48}alt="KUCC Logo" />
         <span className="hidden font-urban text-xl font-bold sm:inline-block">
           {siteConfig.name}
         </span>
@@ -68,7 +69,8 @@ export function MainNav({ items, children }: MainNavProps) {
         className="flex items-center space-x-2 md:hidden"
         onClick={toggleMobileMenu}
       >
-        {showMobileMenu ? <Icons.close /> : <Icons.logo />}
+        {showMobileMenu ? <Icons.close /> :             <Image src="/logo_white_2.png" width={48} height={48}alt="KUCC Logo" />
+}
         <span className="font-bold">Menu</span>
       </button>
       {showMobileMenu && items && (

@@ -10,6 +10,7 @@ import {
   Text
 } from '@react-email/components';
 import { Icons } from '../components/shared/icons';
+import Image from "next/image"
 
 type MagicLinkEmailProps = {
   actionUrl: string
@@ -32,7 +33,7 @@ export const MagicLinkEmail = ({
     <Tailwind>
       <Body className="bg-white font-sans">
         <Container className="mx-auto py-5 pb-12">
-          <Icons.logo className="m-auto block size-10" />
+        <Image src="/logo_white_2.png" width={16} height={16} alt="KUCC Logo" />
           <Text className="text-base">
             Hi {firstName},
           </Text>

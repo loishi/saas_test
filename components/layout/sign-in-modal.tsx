@@ -8,6 +8,7 @@ import { Button } from "~/components/ui/button";
 import { siteConfig } from "~/config/site";
 import { useSigninModal } from "~/hooks/use-signin-modal";
 import { signIn } from "next-auth/react";
+import Image from "next/image";
 
 export const SignInModal = () => {
   const signInModal = useSigninModal();
@@ -18,7 +19,7 @@ export const SignInModal = () => {
       <div className="w-full">
         <div className="flex flex-col items-center justify-center space-y-3 border-b bg-background px-4 py-6 pt-8 text-center md:px-16">
           <a href={siteConfig.url}>
-            <Icons.logo className="size-10" />
+            <Image src="/logo_white_2.png" width={48} height={48}alt="KUCC Logo" />
           </a>
           <h3 className="font-urban text-2xl font-bold">Sign In</h3>
           <p className="text-sm text-gray-500">

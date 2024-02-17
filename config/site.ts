@@ -4,14 +4,14 @@ import { SiteConfig } from "types"
 const site_url = env.NEXT_PUBLIC_APP_URL;
 
 export const siteConfig: SiteConfig = {
-  name: "SaaS Starter",
+  name: "Keio University Chess Club",
   description:
-    "Get your project off to an explosive start with SaaS Starter! Harness the power of Next.js 14, Prisma, Planetscale, Auth.js, Resend, React Email, Shadcn/ui and Stripe to build your next big thing.",
+    "慶應義塾大学公認団体チェスクラブです。毎週月曜日と木曜日に日吉キャンパスで活動しています。",
   url: site_url,
   ogImage: `${site_url}/og.jpg`,
   links: {
-    twitter: "https://twitter.com/miickasmt",
-    github: "https://github.com/mickasmt/next-saas-stripe-starter",
+    twitter: "https://twitter.com/loishi_u",
+    github: "https://github.com/loishi/saas_test",
   },
   mailSupport: "support@saas-starter.com"
 }

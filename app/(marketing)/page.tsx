@@ -7,21 +7,21 @@ import { Icons } from "@/components/shared/icons"
 import { env } from "@/env.mjs"
 
 export default async function IndexPage() {
-  const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/mickasmt/next-saas-stripe-starter",
-    {
-      ...(env.GITHUB_OAUTH_TOKEN && {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }),
-      // data will revalidate every hour
-      next: { revalidate: 3600 },
-    },
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log(e));
+  // const { stargazers_count: stars } = await fetch(
+  //   "https://api.github.com/repos/mickasmt/next-saas-stripe-starter",
+  //   {
+  //     ...(env.GITHUB_OAUTH_TOKEN && {
+  //       headers: {
+  //         Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
+  //         "Content-Type": "application/json",
+  //       },
+  //     }),
+  //     // data will revalidate every hour
+  //     next: { revalidate: 3600 },
+  //   },
+  // )
+  //   .then((res) => res.json())
+  //   .catch((e) => console.log(e));
 
 
   return (
@@ -29,49 +29,40 @@ export default async function IndexPage() {
       <section className="space-y-6 pb-12 pt-16 lg:py-28">
         <div className="container flex max-w-[64rem] flex-col items-center gap-5 text-center">
           <Link
-            href="https://twitter.com/miickasmt/status/1719892161095745801"
+            href="https://twitter.com/keio_kucc"
             className={cn(buttonVariants({ variant: "outline", size: "sm" }), "animate-fade-up opacity-0")}
             style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
             target="_blank"
           >
-            Introducing on <Icons.twitter className="ml-2 size-4" />
+            Follow us on <Icons.twitter className="ml-2 size-4" />
           </Link>
 
           <h1
             className="animate-fade-up text-balance font-urban text-4xl font-extrabold tracking-tight opacity-0 sm:text-5xl md:text-6xl lg:text-7xl"
             style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
           >
-            Kick off with a bang with{" "}
-            <span className="text-gradient_indigo-purple font-extrabold">
-              SaaS Starter
-            </span>
+            Keio University Chess Club
+
           </h1>
 
           <p
             className="max-w-[42rem] animate-fade-up text-balance leading-normal text-muted-foreground opacity-0 sm:text-xl sm:leading-8"
             style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
-          >
-            Build your next project using Next.js 14, Prisma, Planetscale, Auth.js, Resend, React Email, Shadcn/ui, Stripe.
-          </p>
+          >慶應義塾大学 公認大学 チェスクラブです。 </p>
+          <p
+            className="max-w-[42rem] animate-fade-up text-balance leading-normal text-muted-foreground opacity-0 sm:text-xl sm:leading-8"
+            style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
+          >毎週月曜日と木曜日に日吉キャンパスで活動しています</p>
 
           <div
             className="flex animate-fade-up justify-center space-x-2 opacity-0 md:space-x-4"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
-            <Link href="/pricing" className={cn(buttonVariants({ size: "lg" }))}>
-              Go Pricing
+            <Link href="/about" className={cn(buttonVariants({ size: "lg" }))}>
+              About us
             </Link>
-            <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className={cn(buttonVariants({ variant: "outline", size: "lg" }), "px-4")}
-            >
-              <Icons.gitHub className="mr-2 size-4" />
-              <p>
-                <span className="hidden sm:inline-block">Star on</span>{" "}GitHub{" "}
-                <span className="font-semibold">{nFormatter(stars)}</span>
-              </p>
+            <Link href="/login" className={cn(buttonVariants({ variant: "outline", size: "lg"}), "bg-sky-400 text-black hover:bg-sky-500 hover:text-black")}>
+              会員向けページ
             </Link>
           </div>
         </div>

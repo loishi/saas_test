@@ -19,26 +19,17 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              mickasmt
+              Keio University Chess Club
             </a>
-            . Hosted on{" "}
+            . Hosted on {""}
             <a
               href="https://vercel.com"
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              Vercel
-            </a>
-            . Illustrations by{" "}
-            <a
-              href="https://popsy.co"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Popsy
-            </a>
+              Vercel 
+            </a>            
             . The source code is available on{" "}
             <a
               href={siteConfig.links.github}

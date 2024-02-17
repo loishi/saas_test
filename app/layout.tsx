@@ -32,14 +32,14 @@ export const metadata = {
   ],
   authors: [
     {
-      name: "mickasmt",
+      name: "loishi",
     },
   ],
-  creator: "mickasmt",
+  creator: "loishi",
   metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "ja_JP",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -50,12 +50,12 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@miickasmt",
+    creator: "@loishi",
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    apple: "/KUCC_Logo_Apple_180x180.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
@@ -63,7 +63,7 @@ export const metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ja" suppressHydrationWarning>
       <head />
       <body
         className={cn(

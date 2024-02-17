@@ -5,6 +5,7 @@ import { siteConfig } from "~/config/site"
 import { cn, nFormatter } from "~/lib/utils"
 import { Icons } from "~/components/shared/icons"
 import { env } from "~/env.mjs"
+import Image from "next/image"
 
 export default async function IndexPage() {
   // const { stargazers_count: stars } = await fetch(
@@ -25,17 +26,16 @@ export default async function IndexPage() {
 
 
   return (
-    <>
-      <section className="space-y-6 pb-12 pt-16 lg:py-28">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-5 text-center">
-          <Link
-            href="https://twitter.com/keio_kucc"
-            className={cn(buttonVariants({ variant: "outline", size: "sm" }), "animate-fade-up opacity-0")}
-            style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
-            target="_blank"
-          >
-            Follow us on <Icons.twitter className="ml-2 size-4" />
-          </Link>
+    <>        
+    {/* <div className="container flex max-w-[64rem] flex-col items-center gap-6 text-center">
+
+          <Image className="animate-fade-up object-center" src="/logo_no_text.png" width={256} height={256}alt="KUCC Logo" /></div> */}
+       <section className="space-y-6 pb-8 lg:pb-20">
+
+        <div className="container flex max-w-[64rem] flex-col items-center gap-6 text-center">
+
+          
+          <Image className="animate-fade-up object-center" src="/logo_no_text.png" width={256} height={256}alt="KUCC Logo" />
 
           <h1
             className="animate-fade-up text-balance font-urban text-4xl font-extrabold tracking-tight opacity-0 sm:text-5xl md:text-6xl lg:text-7xl"
@@ -64,7 +64,16 @@ export default async function IndexPage() {
             <Link href="/login" className={cn(buttonVariants({ variant: "outline", size: "lg"}), "bg-sky-400 text-black hover:bg-sky-500 hover:text-black")}>
               会員向けページ
             </Link>
+            <Link
+            href="https://twitter.com/keio_kucc"
+            className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+            style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
+            target="_blank"
+          >
+            Follow us on <Icons.twitter className="ml-2 size-4" />
+          </Link>
           </div>
+          
         </div>
       </section>
 

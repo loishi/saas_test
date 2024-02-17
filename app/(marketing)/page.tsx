@@ -72,7 +72,7 @@ export default async function IndexPage() {
         className="animate-fade-up py-16 text-zinc-500 opacity-0 dark:text-zinc-400"
         style={{ animationDelay: "0.55s", animationFillMode: "forwards" }}
       >
-        <div className="container mx-auto">
+        {/* <div className="container mx-auto">
           <h2 className="text-center text-sm font-semibold uppercase">Powered by</h2>
 
           <div className="my-7 flex flex-wrap items-center justify-center gap-10 gap-y-8 lg:gap-14">
@@ -88,7 +88,7 @@ export default async function IndexPage() {
               </Link>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   )

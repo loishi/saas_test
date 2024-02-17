@@ -40,18 +40,12 @@ export function NavBar({ user, items, children, rightElements, scroll = false }:
               <Link
                 href="/login"
                 className={cn(
-                  buttonVariants({ variant: "outline", size: "sm" })
+                  buttonVariants({ variant: "default", size: "default" })
                 )}
               >
-                Login Page
+                Login
               </Link>
             ) : null}
-
-            {user ? (
-              <UserAccountNav user={user} />
-            ) : (
-              <Button className="px-3" variant="default" size="sm" onClick={signInModal.onOpen}>Sign In</Button>
-            )}
           </div>
         </div>
       </header>
